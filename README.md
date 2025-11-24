@@ -1,16 +1,68 @@
-# React + Vite
+# React Stateful та Stateless компоненти (Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей проєкт створено для виконання домашнього завдання з React.  
+Додаток ініціалізовано за допомогою Vite та демонструє роботу двох типів компонентів:
 
-Currently, two official plugins are available:
+- **stateful компонент** з використанням хука `useState`;
+- **stateless компонент**, який лише приймає `props` та відображає дані.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📝 Опис проєкту
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+У проєкті реалізовано:
 
-## Expanding the ESLint configuration
+- `CounterStateful` — **функціональний stateful компонент**:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  - використовує `useState` для збереження стану лічильника;
+  - при натисканні на кнопку значення лічильника збільшується.
+
+- `UserCardStateless` — **stateless компонент**:
+
+  - не має власного стану;
+  - отримує дані через `props` (`name`, `age`) та відображає їх.
+
+- `CounterClass` — **класовий компонент**, який повторює функціональність `CounterStateful`:
+  - використовує `this.state` та `this.setState`;
+  - демонструє відмінності між класовим та функціональним підходом.
+
+Головний компонент `App` відображає всі три компоненти на сторінці.
+
+## Порівняння підходів
+
+Функціональні компоненти з хуками (CounterStateful):
+
+простіший та коротший код;
+
+зручна робота зі станом через useState;
+
+сучасний рекомендований підхід у React.
+
+Класовий компонент (CounterClass):
+
+використовує constructor, this.state, this.setState;
+
+код більш громіздкий;
+
+підходить для розуміння старішої моделі React та роботи з життєвим циклом.
+
+---
+
+## 📦 Встановлення та запуск локально
+
+### 1. Клонувати репозиторій
+
+```bash
+git clone https://github.com/Ecaterini/homework-39-yakovenko.git
+cd homework-39-yakovenko
+
+2. Встановити залежності
+npm install
+
+3. Запустити дев-сервер
+npm run dev
+```
+
+## 🚀 Демо-версія
+
+- (homework-39-yakovenko.vercel.app)
