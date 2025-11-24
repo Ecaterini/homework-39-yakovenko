@@ -65,4 +65,4 @@ npm run dev
 
 ## 🚀 Демо-версія
 
-- (homework-39-yakovenko.vercel.app)
+- (https://homework-39-yakovenko.vercel.app/)
